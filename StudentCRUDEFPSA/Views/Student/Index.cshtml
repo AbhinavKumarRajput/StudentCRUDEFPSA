@@ -1,0 +1,118 @@
+﻿<div class="container-fluid">
+
+
+    <div class="row  shadow-sm">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+            <h4 class="mt-2">Add New Student</h4>
+         <div class="form-container">
+
+             <div class="row mt-2">
+                <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                     @* <label type="hidden" class="form-label"> Roll No.</label> *@
+                 </div>
+                <div class="col-10 col-sm-10 col-md-10 col-lg-10">
+                    <input type="hidden" id="studentId" class="form-control" />
+                </div>
+             </div>
+
+              <div class="row mt-2">
+                <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                       <label class="form-label"> Name : </label>
+                 </div>
+                <div class="col-10 col-sm-10 col-md-10 col-lg-10">
+                       <input type="text" id="name" placeholder="Enter Student Name" class="form-control" />
+                </div>
+             </div>
+
+            <div class="row mt-2">
+                <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                    <label class="form-label"> Age : </label>
+                </div>
+                <div class="col-10 col-sm-10 col-md-10 col-lg-10">
+                         <input type="number" id="age" placeholder="Enter Student Age" class="form-control" />
+                </div>
+            </div>
+
+
+             <div class="row mt-2">
+                <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                    <label class="form-label"> Course : </label>
+                 </div>
+                <div class="col-10 col-sm-10 col-md-10 col-lg-10">
+                        <input type="text" id="course" placeholder="Enter Course Name" class="form-control" />
+                </div>
+             </div>
+
+              <div class="row mt-2 mb-3 mt-2">
+                <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                 </div>
+                <div class="col-10 col-sm-10 col-md-10 col-lg-10">
+                    <button onclick="saveStudent()" class="btn btn-primary">Save</button>
+                </div>
+             </div>
+
+         </div>     
+           
+      </div>
+   </div>
+
+    
+
+    <div class="row mt-2 shadow-sm">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <h4 class="mt-2 mb-2">Student Records</h4>
+            <table border="1" id="tblStudents" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Roll No.</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Course</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+    </div>
+    
+
+</div>
+
+
+
+
+
+
+<!-- Student Details Alert Modal -->
+<div class="modal fade" id="studentAlertModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title">Student Details</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <p><strong>Name:</strong> <span id="alertName"></span></p>
+                <p><strong>Age:</strong> <span id="alertAge"></span></p>
+                <p><strong>Course:</strong> <span id="alertCourse"></span></p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    OK
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="~/js/myScript_1.js" asp-append-version="true"></script>
+
+
+
